@@ -29,6 +29,12 @@ export default class Milk extends Component {
     pasteMode: false
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.value.length > 0) {
+      this.setState({input: nextProps.value})
+    }
+  }
+
   static readFile = file => (
     new Promise((res, rej) => {
       const reader = new FileReader();
