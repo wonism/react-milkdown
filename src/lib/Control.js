@@ -1,10 +1,17 @@
 import React from 'react';
+import FaExpand from 'react-icons/lib/fa/expand';
+import FaEye from 'react-icons/lib/fa/eye';
+import FaFileText from 'react-icons/lib/fa/file-text';
+import FaClone from 'react-icons/lib/fa/clone';
+import FaArrowDown from 'react-icons/lib/fa/arrow-down';
 
 import './Control.scss';
 
 const Btn = ({ icon, click }) => (
   <div>
-    <button className={ icon } onClick={ click } />
+    <button onClick={ click }>
+      {icon()}
+    </button>
   </div>
 );
 
@@ -16,7 +23,9 @@ const Rdo = ({value, name, checked, onChange, icon}) => (
       checked={checked}
       onChange={onChange}
     />
-    <label className={ icon } />
+    <label>
+      {icon()}
+    </label>
   </div>
 );
 
@@ -25,11 +34,11 @@ export default ({ onFullScreen, onPreview, onPasteModeChange, pasteMode }) => (
     <div className="milk-buttons-container">
       <div className="milk-buttons-slide">
         <Btn
-          icon="fa fa-expand"
+          icon={FaExpand}
           click={ onFullScreen }
         />
         <Btn
-          icon="fa fa-eye"
+          icon={FaEye}
           click={ onPreview }
         />
         <Rdo
@@ -37,18 +46,20 @@ export default ({ onFullScreen, onPreview, onPasteModeChange, pasteMode }) => (
           name="mode"
           checked={!pasteMode}
           onChange={onPasteModeChange}
-          icon="fa fa-file-text"
+          icon={FaFileText}
         />
         <Rdo
           value="paste"
           name="mode"
           checked={pasteMode}
           onChange={onPasteModeChange}
-          icon="fa fa-paste"
+          icon={FaClone}
         />
       </div>
       <div className="milk-buttons-drag">
-        <div className="fa fa-arrow-down" />
+        <div>
+          <FaArrowDown />
+        </div>
       </div>
     </div>
   </div>

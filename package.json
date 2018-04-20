@@ -1,11 +1,11 @@
 {
-  "name": "react-milkdown",
-  "version": "1.1.1",
-  "description": "powerful markdown editor for react",
+  "name": "@wonism/react-milkdown",
+  "version": "1.1.2",
+  "description": "powerful markdown editor for react (fork version of Saul-Mirone's react-milkdown)",
   "main": "build/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Saul-Mirone/react-milkdown.git"
+    "url": "https://github.com/wonism/react-milkdown.git"
   },
   "keywords": [
     "markdown",
@@ -21,12 +21,12 @@
     "demo": "node scripts/demo.js",
     "test": "node scripts/test.js --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill --coverage"
   },
-  "author": "mirone",
+  "author": "wonism",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Saul-Mirone/react-milkdown/issues"
+    "url": "https://github.com/wonism/react-milkdown/issues"
   },
-  "homepage": "https://saul-mirone.github.io/react-milkdown/",
+  "homepage": "https://wonism.github.io/react-milkdown/",
   "devDependencies": {
     "autoprefixer": "7.1.2",
     "babel-cli": "^6.26.0",
@@ -122,14 +122,14 @@
   },
   "dependencies": {
     "codemirror": "^5.32.0",
-    "font-awesome": "^4.7.0",
     "highlight.js": "^9.12.0",
     "marked": "^0.3.6",
     "ramda": "^0.25.0",
     "react": "^16.1.1",
     "react-codemirror2": "^3.0.7",
     "react-dom": "^16.1.1",
-    "react-dropzone": "^4.2.3"
+    "react-dropzone": "^4.2.3",
+    "react-icons": "^2.2.7"
   },
   "npmName": "react-milkdown"
 }
